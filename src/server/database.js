@@ -59,9 +59,10 @@ module.exports = {
                     res.status(201);
                     res.send(equip);
                 });
+            } else {
+                res.status( 500 );
+                res.send("Error finding equipment");
             }
-            res.status( 500 );
-            res.send("Error finding equipment");
         } )
     },
     seedEquipment: (req, res) => {

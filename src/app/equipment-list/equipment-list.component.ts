@@ -32,11 +32,15 @@ export class EquipmentListComponent implements OnInit {
 
     updateEquip(): void {
         if ( this.equipmentList.indexOf( this.selectedEquip ) != -1 ) {
-            this.eqService.updateEquip( this.selectedEquip ).subscribe(()=>{ this.getEquipment() });
+            this.eqService.updateEquip( this.selectedEquip ).subscribe(()=>{
+                this.getEquipment();
+            });
         } else {
-            this.eqService.createEquipment( this.selectedEquip ).subscribe(()=>{ this.getEquipment() });
-            this.selectedEquip = null;
+            this.eqService.createEquipment( this.selectedEquip ).subscribe(()=>{
+                this.getEquipment()
+            });
         }
+        this.selectedEquip = null;
     }
 
     getEquipment(): void {

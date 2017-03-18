@@ -1,4 +1,7 @@
 <md-list class="equip-list">
+    <md-list-item class="equip-title">
+        <h2>RTV Equipment</h2>
+    </md-list-item>
     <md-list-item class="equip-list-item" *ngFor="let equip of equipmentList">
         <md-card
                 class="equip-card"
@@ -11,7 +14,7 @@
         </md-card>
     </md-list-item>
     <md-list-item class="equip-list-item equip-btns">
-        <button class="btn btn-add" md-mini-fab (click)="newEquip()" color="accent">+</button>
+        <button class="btn btn-add" md-mini-fab (click)="newEquip()" color="accent"><i class="fa fa-plus" aria-hidden="true"></i></button>
         <button class="btn btn-reload" md-mini-fab (click)="getEquipment()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
     </md-list-item>
 </md-list>
