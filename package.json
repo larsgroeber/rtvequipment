@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "@types/dotenv": "^2.0.20",
     "body-parser": "^1.17.1",
     "core-js": "^2.4.1",
     "dotenv": "^4.0.0",

@@ -40,13 +40,13 @@ export class EquipmentListComponent implements OnInit {
                 this.getEquipment()
             });
         }
-        this.selectedEquip = null;
     }
 
     getEquipment(): void {
         this.eqService.getEquipmentList().subscribe(e => {
             this.equipmentList = e;
         });
+        this.selectedEquip = null;
     }
 
     deleteEquip(): void {

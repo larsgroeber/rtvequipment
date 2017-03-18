@@ -6,17 +6,19 @@
 }
 
 .equip-card {
+    background-color: white;
+
     width: 100%;
     padding: 10px;
     position: relative;
 }
 
 .equip-card:hover {
-    background-color: aquamarine;
+    background-color: aqua;
 }
 
 .equip-card-selected {
-    background-color: aqua !important;
+    background-color: aquamarine !important;
 }
 
 .equip-list-item {

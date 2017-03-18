@@ -3,13 +3,15 @@ import {Http, Headers, RequestOptions} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 
+const root_url = "/rtvequip";
+
 @Injectable()
 export class EquipmentService {
     constructor (private http: Http) {}
 
     // TODO: return promise
     getEquipmentList() {
-        return this.http.get( '/api/equipment/get' )
+        return this.http.get( root_url + '/api/equipment/get' )
             .map( res => res.json() );
     }
 
@@ -19,7 +21,7 @@ export class EquipmentService {
         });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post( '/api/equipment/create', newEquip, options )
+        return this.http.post( root_url + '/api/equipment/create', newEquip, options )
             .map((res) => res.json())
             .catch((err) => Observable.throw(err.json().error) || "Server Error")
     }
@@ -30,7 +32,7 @@ export class EquipmentService {
         });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post( '/api/equipment/update', equip, options )
+        return this.http.post( root_url + '/api/equipment/update', equip, options )
             .map((res) => res.json())
             .catch((err) => Observable.throw(err.json().error) || "Server Error")
     }
@@ -41,7 +43,7 @@ export class EquipmentService {
         });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post( '/api/equipment/delete', equip, options )
+        return this.http.post( root_url + '/api/equipment/delete', equip, options )
             .map((res) => res.json())
             .catch((err) => Observable.throw(err.json().error) || "Server Error")
     }
