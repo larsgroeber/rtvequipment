@@ -1,0 +1,60 @@
+.equip-list {
+    width: 500px;
+}
+
+.equip-card {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+.equip-card:hover {
+    background-color: beige;
+}
+
+.equip-card-selected {
+    background-color: aqua !important;
+}
+
+.equip-list-item {
+    width: 100%;
+    margin-top: 0px;
+    position: relative;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.equip-location {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+
+.equip-borrower {
+    float: right;
+}
+
+.btn-remove {
+    position: absolute;
+    left: 50%;
+    z-index: 9000;
+
+    display: none;
+}
+
+.equip-card:hover > .btn-remove {
+    display: inline;
+}
+
+.btn-reload {
+    margin-left: 5px;
+}
+
+.equip-btns {
+    margin-top: -20px;
+}

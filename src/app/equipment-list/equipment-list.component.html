@@ -1,0 +1,24 @@
+<md-list class="equip-list">
+    <md-list-item class="equip-list-item" *ngFor="let equip of equipmentList">
+        <md-card
+                class="equip-card"
+                [class.equip-card-selected]="equip === selectedEquip"
+                (click)="onCardClick( equip )"
+        >
+            <span class="equip-name">{{equip.name}}</span>
+            <span class="equip-location"> - {{equip.location}} - </span>
+            <span class="equip-borrower" *ngIf="equip.borrower">{{equip.borrower}}</span>
+        </md-card>
+    </md-list-item>
+    <md-list-item class="equip-list-item equip-btns">
+        <button class="btn btn-add" md-mini-fab (click)="newEquip()" color="accent">+</button>
+        <button class="btn btn-reload" md-mini-fab (click)="getEquipment()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+    </md-list-item>
+</md-list>
+<app-equipment-detail *ngIf="equipmentList"
+        (onClickDelete)="deleteEquip()"
+        (onClickSave)="updateEquip()"
+        [equip]="selectedEquip"
+        [isNew]="equipmentList.indexOf( selectedEquip ) == -1"
+>
+</app-equipment-detail>
